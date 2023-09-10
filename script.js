@@ -66,3 +66,29 @@ test("There are at least 500 words on the page", () => {
 
 const console = document.getElementById("tests");
 prettify.toHTML(run(), console);
+var array;
+
+function randomInt(n) {
+  // Return a random number from in [0, n[
+  return Math.floor(Math.random() * n);
+}
+
+function randomMember(arr) {
+  // Return a random member of the array
+  return arr[randomInt(arr.length)];
+}
+
+array = [1, 2, 3, 4, 5, 6];
+
+document.getElementById("button_roll").addEventListener("click", (event) => {
+  let element_list = document.getElementById("list");
+  let new_li = document.createElement("li");
+  new_li.innerText = randomMember(array);
+
+  element_list.appendChild(new_li);
+});
+
+document.getElementById("button_restart").addEventListener("click", (event) => {
+  let element_button_roll = document.getElementById("button_roll");
+  element_button_roll.innerText = 0;
+});
