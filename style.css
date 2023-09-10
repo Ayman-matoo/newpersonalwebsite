@@ -4,11 +4,25 @@
   You must write some CSS to complete this challenge.
    ===================
 */
-html,
+
 body {
+  text-align:centre
+  display:grid;
   margin: 0;
+  grid-temlate-columns:auto auto auto;
   height: 100%;
+  
+}
+p{
+   font-size: 25px;
  
+}
+ img{
+  widith:100px;
+  height:100px;
+  margin-left:outo;
+  margin:right;
+  display:block;
 }
 .header{
   position:fixed;
